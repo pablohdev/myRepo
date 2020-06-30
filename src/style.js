@@ -15,7 +15,7 @@ const style = StyleSheet.create({
     user_repo: {
         color: '#9E9E9E'
     },
-    info_repo:{
+    info_repo: {
         flexWrap: 'nowrap'
     },
     item_list: {
@@ -33,12 +33,46 @@ const style = StyleSheet.create({
         marginRight: 20
     },
     desc_repo: {
-        
+
     },
-    foto_perfil:{
+    foto_perfil: {
         borderRadius: 30,
         width: 60,
         height: 60,
+    },
+    modal: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    modal_center: {
+        backgroundColor: '#FFF',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    button: {
+        width: '80%',
+        height: 50,
+        paddingVertical: 10,
+        borderRadius: 10,
+        backgroundColor: '#333333',
+        textAlign: 'center',
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginBottom: 20
+    },
+    button_text: {
+        color: '#FFFFFF',
+        textAlign: 'center'
+    },
+    input: {
+        width: '80%',
+        height: 60,
+        justifyContent: 'center',
+        backgroundColor: '#e9e9e9',
+        marginBottom: 15,
+        padding: 15
     }
 });
 
