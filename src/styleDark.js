@@ -11,13 +11,17 @@ const styleDark = StyleSheet.create({
         marginHorizontal: 15,
     },
     nome_repo: {
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color: '#FFFFFF'
     },
     user_repo: {
         color: '#9E9E9E'
     },
+    info_repo:{
+        flexWrap: 'nowrap'
+    },
     item_list: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#212121',
         flexDirection: 'row',
         padding: 20,
         marginBottom: 20,
@@ -29,6 +33,14 @@ const styleDark = StyleSheet.create({
         height: 60,
         borderRadius: 30,
         marginRight: 20
+    },
+    desc_repo: {
+        color:'#FFF'
+    },
+    foto_perfil:{
+        borderRadius: 30,
+        width: 60,
+        height: 60,
     }
 
 })

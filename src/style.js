@@ -15,6 +15,9 @@ const style = StyleSheet.create({
     user_repo: {
         color: '#9E9E9E'
     },
+    info_repo:{
+        flexWrap: 'nowrap'
+    },
     item_list: {
         backgroundColor: '#FFFFFF',
         flexDirection: 'row',
@@ -28,6 +31,14 @@ const style = StyleSheet.create({
         height: 60,
         borderRadius: 30,
         marginRight: 20
+    },
+    desc_repo: {
+        
+    },
+    foto_perfil:{
+        borderRadius: 30,
+        width: 60,
+        height: 60,
     }
 });
 
