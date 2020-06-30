@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native';
 
-const style = StyleSheet.create({
+const styleDark = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 15,
     },
     icon: {
-        color: '#333333'
+        color: '#FFFFFF'
     }
 });
 
-export default style;
+export default styleDark;

@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-const style = StyleSheet.create({
+
+const styleDark = StyleSheet.create({
     container: {
-        backgroundColor: '#F4F2F2',
+        backgroundColor: '#333333',
         flex: 1,
     },
     list: {
@@ -29,6 +30,7 @@ const style = StyleSheet.create({
         borderRadius: 30,
         marginRight: 20
     }
-});
 
-export default style;
+})
+
+export default styleDark

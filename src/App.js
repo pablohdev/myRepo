@@ -13,17 +13,18 @@ import {
 import Header from "./components/Header";
 
 import style from "./style";
+import styleDark from "./styleDark";
 
 const CardItem = (item) => {
   return (
-    <View style={style.item_list}>
-      <View style={style.item_foto}>
-        <Image source={{ uri: item.foto }} />
+    <View style={darkTheme ? styleDark.container : style.container}>
+      <View style={darkTheme ? styleDark.container : style.container}>
+        <Image source={darkTheme ? styleDark.container : style.container} />
       </View>
       <View>
-        <Text style={style.nome_repo}>{item.nome}</Text>
-        <Text style={style.user_repo}>@ {item.usuario}</Text>
-        <Text style={style.desc_repo}>{item.descricao}</Text>
+        <Text style={darkTheme ? styleDark.container : style.container}>{item.nome}</Text>
+        <Text style={darkTheme ? styleDark.container : style.container}>@ {item.usuario}</Text>
+        <Text style={darkTheme ? styleDark.container : style.container}>{item.descricao}</Text>
       </View>
     </View>
   );
@@ -31,30 +32,39 @@ const CardItem = (item) => {
 
 const App = () => {
 
-  const [repoList, setRepoList] = useState();
-  const [modalVisible, setModalVisible] = useState(false);
-
+  const [repoList, setRepoList] = useState([]);
+  const [modalVisible, setModalVisible] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(true)
 
   function handleShowModal() {
-    setModalVisible(true);
+    console.log('modal')
+    setModalVisible(!modalVisible);
+  }
+
+  function handleDarkTheme() {
+    console.log('trocando')
+    setDarkTheme(!darkTheme)
   }
 
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={style.container}>
+      <SafeAreaView style={darkTheme ? styleDark.container : style.container}>
         <Modal
           animationType="slide"
-          transparent={true}
           visible={modalVisible}
           onRequestClose={() => {
             Alert.alert("Modal has been closed.");
           }}
         />
-        <Header modalState={handleShowModal} />
+        <Header
+          ToggleDarkTheme={handleDarkTheme}
+          modalState={handleShowModal}
+          darkTheme={darkTheme}
+        />
         <ScrollView>
           <FlatList
-            style={style.list}
+            style={darkTheme ? styleDark.container : style.container}
             data={repoList}
             renderItem={({ item }) => CardItem(item)}
           />
